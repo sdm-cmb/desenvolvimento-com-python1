@@ -1,0 +1,43 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIsta de produtos </title>
+    <style type="text/css">
+        table,th, tr,td{
+            border: 3px solid #5f0000;
+            color:rgb(248, 21, 248)
+        }
+    
+    </style>
+</head>
+<body>
+    <h2 style= ="text-align: center;">{{ descricao }}</h2>
+
+   <table>
+    <tr>
+        <th>Nome Produto</th>
+        <th>Marca</th>
+        <th>Preço R$</th>
+    </tr>
+
+    <!-- { %  % } bloco para criar uma repetição -->
+
+    {% for produto in lista_prod %}
+
+    <tr>
+        <td> {{ produto.nome }}</td>
+        <td>{{ produto.marca }}</td>
+        <td>{{ produto.preco }}</td>
+    </tr>
+    {%endfor%}
+
+   </table>
+    <style>
+        body{
+            background-color: rgb(73, 73, 73);
+        }
+    </style>
+</body>
+</html>
+<!--doc-->
